@@ -6,7 +6,8 @@ import {
   Text,
 } from 'react-native';
 import Home from './src/Screens/Home';
-import MusicLibrary from './src/Screens/MusicLibrary';
+import HomeScreen from './src/Screens/HomeScreen';
+import SecondScreen from './src/Screens/SecondScreen';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 function App() {
@@ -18,9 +19,9 @@ function App() {
    return (
 
 
-   <NavigationContainer>
+   <NavigationContainer key="main">
      <Stack.Navigator
-     initialRouteName="Settings"
+     initialRouteName="Home"
      screenOptions={{
        headerMode: 'screen',
        headerTintColor: 'white',
@@ -31,17 +32,25 @@ function App() {
        name="Home"
        component={Home}
        options={{
-         title: 'Awesome app',
+         headerShown:false
+       }}
+     />
+     <Stack.Screen
+       name="Home2"
+       component={HomeScreen}
+       options={{
+         headerShown:false
+       }}
+     />
+     <Stack.Screen
+       name="Home3"
+       component={SecondScreen}
+       options={{
+         headerShown:false
        }}
      />
     
-     <Stack.Screen
-       name="Settings"
-       component={MusicLibrary}
-       options={{
-         gestureEnabled: false,
-       }}
-     />
+    
    </Stack.Navigator>
     </NavigationContainer>
    );

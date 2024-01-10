@@ -1,17 +1,18 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
-const MusicLibrary = () => {
+
+const HomeScreen = () => {
   return (
-    <View style={styles.container2}>
-    
-    </View>
+    <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
+    <Text>HomeScreen</Text>
+  </View>
   );
 };
 
 // Styles for your components
 const styles = StyleSheet.create({
-  container2: {
+  container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
@@ -23,4 +24,4 @@ const styles = StyleSheet.create({
 });
 
 // Export your screen component
-export default MusicLibrary;
+export default HomeScreen;

@@ -10,6 +10,9 @@ import HomeScreen from './src/Screens/HomeScreen';
 import SecondScreen from './src/Screens/SecondScreen';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
+import AudioTrack from './src/Screens/AudioTrack';
+import MusicPlayer from './src/Screens/MusicPlayer';
+
 function App() {
   
   //   backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
@@ -21,7 +24,7 @@ function App() {
 
    <NavigationContainer key="main">
      <Stack.Navigator
-     initialRouteName="Home"
+     initialRouteName="AudioTrack"
      screenOptions={{
        headerMode: 'screen',
        headerTintColor: 'white',
@@ -31,6 +34,20 @@ function App() {
      <Stack.Screen
        name="Home"
        component={Home}
+       options={{
+         headerShown:false
+       }}
+     />
+     <Stack.Screen
+       name="MusicPlayer"
+       component={MusicPlayer}
+       options={{
+         headerShown:false
+       }}
+     />
+     <Stack.Screen
+       name="AudioTrack"
+       component={AudioTrack}
        options={{
          headerShown:false
        }}

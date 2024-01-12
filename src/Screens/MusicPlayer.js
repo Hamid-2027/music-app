@@ -1,12 +1,14 @@
 import React from "react";
 import { Text, View, StyleSheet} from "react-native";
+// import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from "react-native-vector-icons/Ionicons"
 
 const MusicPlayer =()=>{
 
 
     return(
     <View style={styles.container}>
-        {/* <Icon name ="heart-outline" size={30} /> */}
+        <Icon name ="heart-outline" size={20} />
         <Text>
         MusicPlayer
         </Text>

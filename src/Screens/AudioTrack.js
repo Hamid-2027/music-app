@@ -13,8 +13,9 @@ const AudioTrack = () => {
 const styles = StyleSheet.create({ 
   container2: {
     flex: 1,
-    
-  },
+    backgroundColor:'#222831'
+    // backgroundColor:'white'
+  }, 
 
 });
 
